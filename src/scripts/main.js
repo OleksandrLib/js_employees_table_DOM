@@ -127,7 +127,7 @@ function showNotification(message, type) {
 
 let editingCell = null;
 
-tbody.addEventListener('dbclick', (e) => {
+tbody.addEventListener('dblclick', (e) => {
   const cell = e.target;
 
   if (cell.tagName !== 'TD') {
@@ -159,11 +159,11 @@ tbody.addEventListener('dbclick', (e) => {
   input.addEventListener('blur', () => finishEdit(true));
 
   input.addEventListener('keydown', (o) => {
-    if (e.key === 'Enter') {
+    if (o.key === 'Enter') {
       finishEdit(true);
     }
 
-    if (e.key === 'Escape') {
+    if (o.key === 'Escape') {
       finishEdit(false);
     }
   });
